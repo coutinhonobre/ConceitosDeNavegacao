@@ -29,7 +29,10 @@ class ContractAdapter(
         private val ivPhotograph: ImageView = itemView.findViewById(R.id.iv_photograph)
 
         fun bind(contact: Contact) {
-
+            with(contact) {
+                tvName.text = name
+                tvPhone.text = phone
+            }
         }
     }
 }
